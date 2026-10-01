@@ -13,9 +13,10 @@
     <ul>
         {% for tarefa in tarefas %}
           <li>{{ tarefa }}</li>
+          <a href="/delete/{{ loop.tarefas0 }}">Excluir</a>
         {% endfor %}
     </ul>
 
-    <a href="/delete/{{ loop.tarefas0 }}">Excluir</a>
+    
     </body>
 </html>
