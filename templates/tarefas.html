@@ -9,17 +9,17 @@
         <input type = "text" name = "tarefa">
         <button type = "submit">Adicionar</button>
     </form>
-
-    <ul>
-        {% for tarefa in tarefas %}
-          <li>
-            {{ tarefa }}
-          <a href="/delete/{{ loop.index0 }}">Excluir </a>
-        </li>
-        {% endfor %}
-          
-    </ul>
-
     
+        <ul>
+        {% for tarefa in tarefas %}
+          <li>{{ tarefa }}</li>
+          <a href="/delete/{{ loop.index0 }}"><button>🗑️</button></a>
+        {% endfor %}
+    </ul>   
+   {% if lista %}
+    {% else %}
+     <p>Não há itens! Parabéns! Você fez todas as tarefas!</p>
+    {% endif %}
+
     </body>
 </html>
