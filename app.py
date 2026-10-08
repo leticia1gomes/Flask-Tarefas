@@ -11,7 +11,7 @@ def tarefas():
     return render_template ("tarefas.html", tarefas=tarefas)
 
 @app.route("/add", methods = ["POST"])
-def add():
+def adicionar():
     tarefa = request.form.get("tarefa")
     session["tarefas"].append(tarefa)
     session.modified = True
