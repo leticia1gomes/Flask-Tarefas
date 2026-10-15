@@ -4,22 +4,24 @@
         <link rel = "stylesheet" href = "{{url_for('static', filename='style.css')}}">
     </head>
     <body>
-        <h1>Lista de Tarefas</h1>
-    <form action = "/add" method = "POST">
-        <input type = "text" name = "tarefa">
-        <button type = "submit">Adicionar</button>
-    </form>
+        <h1>Lista de Tarefas😻</h1>
     
-        <ul>
+     <ol>
+        
         {% for tarefa in tarefas %}
           <li>{{ tarefa }}</li>
           <a href="/delete/{{ loop.index0 }}"><button>🗑️</button></a>
         {% endfor %}
-    </ul>   
+    </ol>   
    {% if lista %}
     {% else %}
      <p>Não há itens! Parabéns! Você fez todas as tarefas!</p>
     {% endif %}
+
+<form action = "/add" method = "POST">
+        <input type = "text" name = "tarefa">
+        <button type = "submit">Adicionar</button>
+    </form>
 
     </body>
 </html>

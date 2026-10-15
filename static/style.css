@@ -1,3 +1,24 @@
 body{
-    background-color:rgb(62, 176, 190)
+    background-color:rgb(62, 176, 190);
+    flex-direction: column;
+    align-items:center;
+}
+button{
+    color:rgb(36, 112, 122);
+    background-color:rgb(176, 244, 252);
+    padding: 5px 20px;
+    font-size:18px;
+    border-radius: 30px;
+    border-color: rgb(54, 153, 160);
+    border-width: 3px;
+}
+button:hover{
+    background-color: rgb(141, 213, 231);
+}
+h1{
+    color:rgb(36, 112, 122)
+}
+
+p{
+    font-size:20px
 }
